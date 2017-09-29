@@ -28,7 +28,8 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.osc.controller.nsc.entities.InspectionHookEntity;
 import org.osc.controller.nsc.entities.InspectionPortEntity;
 import org.osc.controller.nsc.entities.NetworkElementEntity;
@@ -40,7 +41,7 @@ import org.osgi.service.transaction.control.TransactionControl;
 
 public class RedirectionApiUtils {
 
-    private static final Logger LOG = Logger.getLogger(RedirectionApiUtils.class);
+    private static final Logger LOG = LoggerFactory.getLogger(RedirectionApiUtils.class);
 
     private TransactionControl txControl;
     private EntityManager em;

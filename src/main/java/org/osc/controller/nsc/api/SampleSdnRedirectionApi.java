@@ -21,7 +21,8 @@ import java.util.UUID;
 
 import javax.persistence.EntityManager;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.osc.controller.nsc.entities.InspectionHookEntity;
 import org.osc.controller.nsc.entities.InspectionPortEntity;
 import org.osc.controller.nsc.entities.NetworkElementEntity;
@@ -39,7 +40,7 @@ import org.osgi.service.transaction.control.TransactionControl;
 
 public class SampleSdnRedirectionApi implements SdnRedirectionApi {
 
-    private static final Logger LOG = Logger.getLogger(SampleSdnRedirectionApi.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SampleSdnRedirectionApi.class);
 
     private TransactionControl txControl;
     private EntityManager em;
